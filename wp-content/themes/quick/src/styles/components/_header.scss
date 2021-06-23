@@ -1,0 +1,43 @@
+.Header {
+    .headerBanner__inner {
+        display: flex;
+        .headerBanner__logo {
+            flex: 1 1 0;
+            padding: 1em 0 1em 5em;
+            @include bp(lg) {
+                padding-left: 6em;
+            }
+        }
+        .headerBanner__menu {
+            background-color: $color-menudot;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            @include bp(sm) {
+                width: 250px;
+            }
+        }
+    }
+}
+
+.headerBanner__menu--item {
+    width: 80px;
+    height: 80px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    @include bp(lg) {
+        padding-left: 50px;
+        width: 112px;
+    }
+    .box {
+        width: 5px;
+        height: 5px;
+        background: #fff;
+        margin: 3px 3px;
+        display: inline-block;
+    }
+}
