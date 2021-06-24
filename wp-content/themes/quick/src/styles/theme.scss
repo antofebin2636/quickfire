@@ -17,3 +17,12 @@
 @import "./helpers/body";
 @import "./components/header";
 @import "./components/banner";
+@import "./components/txtCol";
+@import "./components/proCarousel";
+
+/* ----------------------------------------------------------------------
+| Vendors
+|------------------------------------------------------------------------
+| CSS required by external modules
+*/
+@import "~@glidejs/glide/src/assets/sass/glide.core";

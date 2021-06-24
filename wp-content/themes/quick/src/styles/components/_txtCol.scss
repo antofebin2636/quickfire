@@ -1,0 +1,62 @@
+.txtColumn{
+  background-color: $color-secondary-dark;
+  color: $color-white;
+  @include bp(sm){
+    padding-top: 7em;
+    padding-bottom: 14em;
+  }
+  .txtColumn__primary{
+    grid-column: 2/7;
+    .title{
+      font-family: $font-secondary;
+      font-weight:$font-medium;
+      display: block;
+      @include bp(sm){
+        font-size: 36px;
+        line-height: 50px;
+      }
+    }
+  }
+
+  .txtColumn__secondary{
+    @include bp(sm){
+      grid-column: 8/12;
+    }
+    p{
+      font-size: 14px;
+      line-height: 22px;
+      opacity: 0.8;
+    }
+  }
+}
+
+.txtColumn{
+  position: relative;
+}
+
+.ct__tag{
+  color: $color-primary;
+  font-size: 15px;
+  line-height: 20px;
+  position: relative;
+  &:after{
+    content: '';
+    border-bottom: 1px solid;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+}
+
+.txtCol--cta{
+  display: inline-block;
+  padding-top: 2em;
+}
+
+
+.txt--vrTitle{
+  position: absolute;
+  left: 0px;
+  top: 40%;
+}

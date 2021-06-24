@@ -1,0 +1,13 @@
+.proCarousel{
+  position: relative;
+  @include bp(sm){
+    margin-top: -150px;
+  }
+}
+
+.proCarousel__wrapper{
+  color: $color-white;
+  @include bp(lg){
+    grid-column: 2/13;
+  }
+}
