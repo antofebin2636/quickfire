@@ -195,7 +195,7 @@ body {
   min-height: 100vh;
   color: #2f2f2f;
   font-weight: 400;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.4;
   background-color: #ffffff;
 }
@@ -246,12 +246,12 @@ select > option {
 
 ::selection {
   color: #ffffff;
-  background: #1a2240;
+  background: #4DBFB2;
 }
 
 ::-moz-selection {
   color: #ffffff;
-  background: #1a2240;
+  background: #4DBFB2;
 }
 
 .Disabled {
@@ -259,6 +259,22 @@ select > option {
   text-decoration: none;
   cursor: not-allowed;
   opacity: 0.5;
+}
+
+.Body {
+  font-size: 15px;
+  line-height: 24px;
+  overflow-x: hidden;
+  background-color: #ffffff;
+}
+
+main {
+  overflow-x: hidden;
+}
+@media (min-width: 1200px) {
+  main {
+    overflow-x: unset;
+  }
 }
 
 .Header .headerBanner__inner {
@@ -270,7 +286,7 @@ select > option {
 }
 @media (min-width: 1200px) {
   .Header .headerBanner__inner .headerBanner__logo {
-    padding-left: 6em;
+    padding-left: 6%;
   }
 }
 .Header .headerBanner__inner .headerBanner__menu {
@@ -307,4 +323,180 @@ select > option {
   background: #fff;
   margin: 3px 3px;
   display: inline-block;
+}
+
+.homeBanner__container {
+  display: grid;
+  grid-template-columns: 6% 94%;
+}
+@media (min-width: 1200px) {
+  .homeBanner__container {
+    grid-template-columns: 6% 94%;
+  }
+}
+.homeBanner__container .homeBanner__content {
+  position: relative;
+  background-color: #1D1D1D;
+  min-height: 75vh;
+}
+@media (min-width: 768px) {
+  .homeBanner__container .homeBanner__content {
+    min-height: 80vh;
+  }
+}
+.homeBanner__container .homeBanner__content .homeBanner__overlay {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.homeBanner__container .homeBanner__content .homeBanner__bg {
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding-left: 8%;
+}
+.homeBanner__container .homeBanner__content .homeBanner__bg .title {
+  align-self: center;
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+  font-size: 32px;
+  line-height: 38px;
+}
+@media (min-width: 1200px) {
+  .homeBanner__container .homeBanner__content .homeBanner__bg .title {
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
+.homeBanner__container .homeBanner__content .homeBanner__bg .title .title--border {
+  border-bottom: 2px solid #ffffff;
+  width: 50px;
+  display: inline-block;
+  position: relative;
+  top: -10px;
+}
+
+.homeBanner__row {
+  position: relative;
+}
+.homeBanner__row:after {
+  content: "";
+  background-color: #1D1D1D;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.homeBanner__row .scroller__txt {
+  position: absolute;
+  bottom: 0px;
+  height: 40%;
+  color: #ffffff;
+  transform: rotate(270deg);
+  z-index: 2;
+  align-items: center;
+  font-size: 11px;
+  text-transform: capitalize;
+  opacity: 0.7;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .homeBanner__row .scroller__txt {
+    display: flex;
+  }
+}
+
+.homeBanner__link {
+  position: absolute;
+  z-index: 2;
+  color: #ffffff;
+  bottom: 0px;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .homeBanner__link {
+    padding-left: 8%;
+  }
+}
+.homeBanner__link .homeBanner__linkWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+@media (min-width: 1200px) {
+  .homeBanner__link .homeBanner__linkWrapper {
+    justify-content: flex-start;
+    gap: 10%;
+  }
+}
+.homeBanner__link .bannerLink__box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .homeBanner__link .bannerLink__box:nth-child(1) {
+    margin-left: 10%;
+  }
+}
+@media (min-width: 768px) {
+  .homeBanner__link .bannerLink__box {
+    padding-bottom: 4em;
+    padding-left: 2.5em;
+  }
+}
+.homeBanner__link .bannerLink__box .title {
+  display: block;
+  padding-bottom: 0.5em;
+}
+@media (min-width: 768px) {
+  .homeBanner__link .bannerLink__box .title {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.homeBanner__link .bannerLink__box .main__title {
+  display: block;
+  transition: all 0.2s;
+}
+@media (min-width: 768px) {
+  .homeBanner__link .bannerLink__box .main__title {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+.homeBanner__link .bannerLink__box .main__title:after {
+  content: "";
+  border-bottom: 1px solid;
+  width: 100%;
+  display: block;
+  transform: scaleX(0);
+  transition: all 0.5s;
+  transform-origin: left;
+}
+.homeBanner__link .bannerLink__box .main__title:hover:after {
+  transform: scale(1);
+}
+.homeBanner__link .bannerLink__box::before {
+  content: attr(data-title);
+  position: absolute;
+  display: block;
+  left: 0px;
+  color: #4DBFB2;
+  opacity: 0.8;
+  font-weight: 600;
 }

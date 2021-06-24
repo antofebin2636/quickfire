@@ -1,0 +1,12 @@
+.Body {
+    @include Font__15-24;
+    overflow-x: hidden;
+    background-color: $color-white;
+}
+
+main {
+    overflow-x: hidden;
+    @include bp(lg) {
+        overflow-x: unset;
+    }
+}
