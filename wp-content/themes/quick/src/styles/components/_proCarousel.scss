@@ -1,13 +1,117 @@
 .proCarousel{
   position: relative;
-  @include bp(sm){
-    margin-top: -150px;
-  }
+  margin-bottom: 6em;
+  margin-top: -150px;
+  //@include bp(sm){
+  //  margin-top: -150px;
+  //}
 }
 
 .proCarousel__wrapper{
   color: $color-white;
-  @include bp(lg){
+  grid-column: 1/5;
+  padding: 0 0 0 2em;
+
+  @include bp(sm){
     grid-column: 2/13;
+  }
+}
+
+.carouselContent{
+  .carouselContent__title .title{
+    color:$color-primary;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom:1em;
+    position: relative;
+    transition: color 0.2s;
+    &:after{
+      @include under-line;
+    }
+    &:hover{
+      color: $color-white;
+    }
+  }
+
+  .carouselContent__img{
+    position: relative;
+    padding-bottom: 90%;
+    @include bp(xs){
+      padding-bottom: 60%;
+    }
+    @include bp(lg){
+      padding-bottom: 60%;
+    }
+    img{
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+}
+
+.carouselContent__desc{
+  padding-top: 1.5em;
+  .title{
+    color: $color-primary;
+    font-family: $font-secondary;
+    @include Font__24-32;
+    position: relative;
+    margin-bottom: 0.5em;
+    display: inline-block;
+    &:after{
+      @include under-line;
+    }
+    @include bp(lg){
+      margin-bottom: 1rem;
+    }
+  }
+  p{
+
+    color: $color-gray-dark;
+    font-size: 13px;
+    line-height: 20px;
+    @include bp(lg){
+      max-width: 60%;
+    }
+  }
+}
+
+.proCarousel__wrapper{
+
+  .glide{
+    position: relative;
+  }
+  .glide__arrow{
+    position: absolute;
+    top: 34%;
+    right: 45px;
+
+    background-color: $color-primary;
+    font-weight: 400;
+
+    padding: 4px 11px;
+    border-radius: 31px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s;
+    &:hover{
+      color: $color-primary;
+      background-color: $color-secondary-dark;
+    }
+    @include bp(sm){
+      right: 108px;
+      top: 28%;
+    }
+    @include bp(lg){
+      right: 189px;
+      top:37%;
+      padding: 8px 13px;
+      font-size: 27px;
+    }
   }
 }

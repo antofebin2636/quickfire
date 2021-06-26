@@ -39,5 +39,14 @@
         background: #fff;
         margin: 3px 3px;
         display: inline-block;
+        transition: opacity 0.2s;
+    }
+    &:hover,&:focus{
+        .box:nth-child(2),
+        .box:nth-child(4),
+        .box:nth-child(6),
+        .box:nth-child(8) {
+            opacity: 0;
+        }
     }
 }

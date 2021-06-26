@@ -58,6 +58,7 @@
     "dependencies": {
         "@brave-agency/browserslist-config": "latest",
         "@brave-agency/stylelint-config": "latest",
+        "@fortawesome/fontawesome-free": "^5.15.3",
         "@glidejs/glide": "^3.4.1",
         "curtainsjs": "^8.0.5",
         "dotenv": "^8.2.0",

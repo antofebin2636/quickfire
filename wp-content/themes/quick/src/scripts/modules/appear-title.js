@@ -50,9 +50,11 @@ export default function init() {
     }
 
     wrapper.forEach(wrap => {
+
         const boxes = wrap.querySelectorAll('[data-show]');
         ElementObserver(wrap, {
             onEnter:() =>{
+
                 gsap.from(boxes, {
                     opacity:0,
                     y:100,
@@ -68,24 +70,32 @@ export default function init() {
 
     });
 
-    upTxt.forEach(wrap => {
-        const boxes = wrap.querySelectorAll('[data-upTxt]');
-        ElementObserver(wrap, {
-            onEnter:() =>{
-                gsap.from(boxes, {
-                    opacity:0,
-                    y:150,
-                    ease: "expo.out",
-                    duration:3,
-                    stagger: 0.2,
-                });
-            }
-            ,
-            offset: 0,
-            once: true,
-        });
 
-    });
+
+    if (upTxt) {
+        upTxt.forEach((element) => {
+            gsap.set(element, { autoAlpha: 0 });
+
+            ElementObserver(element, {
+
+                onEnter: () => {
+                    console.log(1);
+                    gsap.set(element, { autoAlpha: 1 });
+                    gsap.from(element, {
+                        opacity:0,
+                        y:50,
+                        ease: "expo.out",
+                        duration:3,
+                        stagger: 0.2,
+                    });
+
+                },
+                offset: 0,
+                once: true,
+            });
+        });
+    }
+
 
 
 

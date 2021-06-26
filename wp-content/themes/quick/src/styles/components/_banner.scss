@@ -96,11 +96,12 @@
         padding-left: 8%;
     }
     .homeBanner__linkWrapper{
-        display: flex;
-
+        display: none;
         align-items: center;
         gap: 5%;
-
+        @include bp(sm){
+            display: flex;
+        }
         @include bp(lg){
             justify-content: flex-start;
             gap: 10%;

@@ -52,3 +52,12 @@ main {
     }
 }
 
+
+@mixin under-line{
+    content: "";
+    border-bottom: 1px solid;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}

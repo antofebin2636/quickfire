@@ -1,16 +1,37 @@
 .txtColumn{
   background-color: $color-secondary-dark;
   color: $color-white;
+  padding-top: 3em;
+  padding-bottom: 15em;
   @include bp(sm){
-    padding-top: 7em;
+    padding-top: 4em;
     padding-bottom: 14em;
   }
+  @include bp(lg){
+    padding-top: 7em;
+  }
   .txtColumn__primary{
-    grid-column: 2/7;
+
+    grid-column: 1/5;
+    padding: 0 2em;
+    @include bp(sm){
+      grid-column:2/12;
+      padding: unset;
+    }
+
+    @include bp(midlg){
+      grid-column: 2/10;
+    }
+
+    @include bp(lg){
+      grid-column: 2/8;
+    }
+
     .title{
       font-family: $font-secondary;
       font-weight:$font-medium;
       display: block;
+     @include Font__24-32;
       @include bp(sm){
         font-size: 36px;
         line-height: 50px;
@@ -18,8 +39,16 @@
     }
   }
 
+
   .txtColumn__secondary{
+
+    grid-column: 1/5;
+    padding: 0 2em;
     @include bp(sm){
+      padding: unset;
+      grid-column: 2/12;
+    }
+    @include bp(lg){
       grid-column: 8/12;
     }
     p{
@@ -39,6 +68,7 @@
   font-size: 15px;
   line-height: 20px;
   position: relative;
+  transition: color 0.2s;
   &:after{
     content: '';
     border-bottom: 1px solid;
@@ -46,6 +76,9 @@
     position: absolute;
     left: 0px;
     bottom: 0px;
+  }
+  &:hover{
+    color: $color-white;
   }
 }
 

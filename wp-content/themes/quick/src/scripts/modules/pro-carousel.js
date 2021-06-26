@@ -1,4 +1,4 @@
-import Glide, {  Swipe, Controls,Breakpoints } from '@glidejs/glide/dist/glide.modular.esm'
+import Glide, {  Swipe, Controls,Breakpoints,Autoplay } from '@glidejs/glide/dist/glide.modular.esm'
 
 export default function init({ el }) {
     /* The original element that requested the module */
@@ -10,32 +10,44 @@ export default function init({ el }) {
 
     }
 
+
     new Glide(elements.carousel, {
         type: 'carousel',
-        perView: 4,
+        perView: 3,
         autoplay: 6000,
         swipe: true,
-        //gap:16,
-        peek: {before:0,after:100},
-        autoPlay:true,
+        gap:40,
+        peek: {before:0,after:250},
+        // autoPlay:true,
         breakpoints:{
-            414:{
-                perView: 1,
+            440:{
+                perView:1,
+                peek: {before:0,after:100},
+            },
+            825:{
+                perView: 2,
                 gap: 20,
+                peek: {before:0,after:150},
 
             },
             1024:{
-                gap:20,
                 perView: 2,
+                gap:20,
+                peek: {before:0,after:150},
+            },
+            1880:{
+                perView: 2,
+                gap: 40,
+                peek: {before:0,after:250},
 
             },
-            1440:{
-                gap: 20,
+            2000:{
                 perView: 3,
+                gap: 40,
             },
 
         },
 
-    }).mount({ Swipe, Controls,Breakpoints});
+    }).mount({ Swipe, Controls,Breakpoints,Autoplay});
 
 }
