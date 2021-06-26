@@ -8,6 +8,7 @@
         position: relative;
         background-color: $color-secondary-dark;
         min-height: 75vh;
+        overflow: hidden;
         @include bp(sm) {
             min-height: 80vh;
         }

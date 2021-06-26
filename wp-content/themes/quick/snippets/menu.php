@@ -5,7 +5,7 @@
             <div class="nav__list">
                 <span class="title">Navigation</span>
                 <ul class="menu__list">
-                    <li class="has__child">Services
+                    <li class="has__child">Services <span></span>
                         <ul class="sub__menu">
                             <li><a href="">Media Relations</a></li>
                             <li><a href="">Media Relations</a></li>
@@ -36,6 +36,14 @@
                             <span class="sub--title">Address</span>
                             <p>52 Berkeley Square<br>
                                 Mayfair, London, WIJ 58T</p>
+                        </div>
+                        <div class="box">
+                            <span class="sub--title">Social</span>
+                            <ul class="social">
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>

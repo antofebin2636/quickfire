@@ -27,6 +27,10 @@
       grid-column: 2/8;
     }
 
+    @include bp(xxlg){
+      grid-column: 2/7;
+    }
+
     .title{
       font-family: $font-secondary;
       font-weight:$font-medium;
@@ -50,6 +54,9 @@
     }
     @include bp(lg){
       grid-column: 8/12;
+    }
+    @include bp(xxlg){
+      grid-column: 7/11;
     }
     p{
       font-size: 14px;

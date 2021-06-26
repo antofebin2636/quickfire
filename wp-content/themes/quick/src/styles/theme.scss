@@ -10,6 +10,11 @@
 | Core Styles
 |--------------------------------------------------------------------- */
 
+
+@import "./fontawesome/scss/fontawesome.scss";
+@import "./fontawesome/scss/solid.scss";
+@import "./fontawesome/scss/brands.scss";
+
 @import "./core/reset";
 @import "./core/base";
 @import "./helpers/breakpoints";
@@ -20,10 +25,14 @@
 @import "./components/txtCol";
 @import "./components/proCarousel";
 @import "./components/menu";
+@import "./components/clients";
+@import "./components/imageGrid";
 
 /* ----------------------------------------------------------------------
 | Vendors
 |------------------------------------------------------------------------
 | CSS required by external modules
 */
+
 @import "~@glidejs/glide/src/assets/sass/glide.core";
+

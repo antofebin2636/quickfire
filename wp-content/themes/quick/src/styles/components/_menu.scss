@@ -1,5 +1,5 @@
 .menu{
-  position: absolute;
+  position: fixed;
   top:0;
   left: 0;
   height: 100%;
@@ -9,14 +9,19 @@
   color: $color-white;
   display: flex;
   justify-content: center;
-  align-items: center;
+
   clip-path: circle(25px at calc(100% - 45px) 45px);
   transition: all 0.3s ease-in-out;
   z-index: -1;
+
+  @include bp(sm){
+    align-items: center;
+  }
 }
 .menu-btn{
   position: absolute;
-  top: 20px;
+  top: 28px;
+  right: 10%;
   font-size: 30px;
   cursor: pointer;
  @include bp(sm){
@@ -27,6 +32,7 @@
 .menu.active{
   clip-path: circle(75%);
   z-index: 4;
+  overflow: scroll;
 }
 
 .menuItems{
@@ -43,13 +49,16 @@
   .menu__items{
     display: grid;
     grid-template-columns: 100%;
+    padding: 5em 2em;
+    grid-gap: 3em;
     @include bp(sm){
+      padding: unset;
       grid-gap: 20%;
       grid-template-columns: repeat(2,1fr);
     }
     .menu__list > li{
 
-      @include Font__20-32;
+      @include Font__16-20;
       @include bp(lg){
         @include Font__18-18;
       }
@@ -57,6 +66,7 @@
 
     .menu__list > li{
       padding-bottom: 0.8em;
+      display: block;
       &:not(:first-child){
         border-top: 1px solid rgba(255,255,255, 0.5);
         padding-top: 0.8em;
@@ -65,8 +75,19 @@
   }
 }
 
+
 .has__child
 {
+  position: relative;
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:after {
+    content: fa-content($fa-var-chevron-down);
+    position: absolute;
+    right: 0px;
+    top: 2px;
+  }
   ul{
     //padding: 0.5em 0 0.5em 0.5em;
     padding-left: 0.5em;
@@ -75,9 +96,11 @@
       transition: all .5s ease-in-out;
       line-height: 0;
       color: transparent;
+      font-size: 14px;
+      font-weight: 300;
     }
     &.active{
-      padding: 0.5em 0 0.5em 0.5em;
+      padding: 0.5em 0 0.5em 1em;
       li{
         line-height: 1.5;
         color: $color-white;
@@ -123,10 +146,11 @@
     font-family: $font-secondary;
     border-bottom: 1px solid rgba(255,255,255, 0.5);
     display: block;
-    padding-bottom: 0.5em;
+    padding-bottom: 1em;
     margin-bottom: 0.5em;
-    @include Font__18-18;
+    @include Font__24-32;
     @include bp(sm){
+      padding-bottom: 0.5em;
       @include Font__30-36;
     }
   }
@@ -152,7 +176,7 @@
     display: grid;
     grid-template-columns: 100%;
     grid-gap: 1em;
-    @include bp(sm){
+    @include bp(md){
       grid-template-columns: repeat(2,1fr);
     }
     .box{
@@ -183,5 +207,12 @@
         }
       }
     }
+  }
+}
+
+.contact__menu{
+  .social{
+    display: flex;
+    gap: 15px;
   }
 }
