@@ -111,7 +111,7 @@
     .bannerLink__box{
         display: flex;
         flex-direction: column;
-        position: relative;
+        position: relative;has__child
         &:nth-child(1){
             @include bp(sm){
                 margin-left: 10%;

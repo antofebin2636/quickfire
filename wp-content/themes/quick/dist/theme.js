@@ -130,6 +130,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/scripts/modules/menu.js":
+/*!*************************************!*\
+  !*** ./src/scripts/modules/menu.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ init)\n/* harmony export */ });\nfunction init({ el }) {\n    document.querySelector('.has__child').addEventListener('click',\n        function (){\n            this.querySelector('.sub__menu').classList.toggle('active');\n        });\n\n\n    document.querySelector('.headerBanner__menu--item').addEventListener('click',\n        function (){\n            document.querySelector('.menu').classList.toggle('active');\n        });\n\n\n    document.querySelector('.menu-btn').addEventListener('click',function (){\n        document.querySelector('.menu').classList.toggle('active');\n    })\n}\n\n//# sourceURL=webpack://wordpress-starter/./src/scripts/modules/menu.js?");
+
+/***/ }),
+
 /***/ "./src/scripts/modules/pro-carousel.js":
 /*!*********************************************!*\
   !*** ./src/scripts/modules/pro-carousel.js ***!
@@ -147,7 +158,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var map = {\n\t\"./appear-title\": \"./src/scripts/modules/appear-title.js\",\n\t\"./appear-title.js\": \"./src/scripts/modules/appear-title.js\",\n\t\"./carousel\": \"./src/scripts/modules/carousel.js\",\n\t\"./carousel.js\": \"./src/scripts/modules/carousel.js\",\n\t\"./header\": \"./src/scripts/modules/header.js\",\n\t\"./header.js\": \"./src/scripts/modules/header.js\",\n\t\"./pro-carousel\": \"./src/scripts/modules/pro-carousel.js\",\n\t\"./pro-carousel.js\": \"./src/scripts/modules/pro-carousel.js\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/scripts/modules sync recursive ^\\\\.\\\\/.*$\";\n\n//# sourceURL=webpack://wordpress-starter/./src/scripts/modules/_sync_^\\.\\/.*$?");
+eval("var map = {\n\t\"./appear-title\": \"./src/scripts/modules/appear-title.js\",\n\t\"./appear-title.js\": \"./src/scripts/modules/appear-title.js\",\n\t\"./carousel\": \"./src/scripts/modules/carousel.js\",\n\t\"./carousel.js\": \"./src/scripts/modules/carousel.js\",\n\t\"./header\": \"./src/scripts/modules/header.js\",\n\t\"./header.js\": \"./src/scripts/modules/header.js\",\n\t\"./menu\": \"./src/scripts/modules/menu.js\",\n\t\"./menu.js\": \"./src/scripts/modules/menu.js\",\n\t\"./pro-carousel\": \"./src/scripts/modules/pro-carousel.js\",\n\t\"./pro-carousel.js\": \"./src/scripts/modules/pro-carousel.js\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/scripts/modules sync recursive ^\\\\.\\\\/.*$\";\n\n//# sourceURL=webpack://wordpress-starter/./src/scripts/modules/_sync_^\\.\\/.*$?");
 
 /***/ }),
 

@@ -8,7 +8,7 @@ Use this to create your global site header, also including a 'main' wrapper whic
 ?>
 <?php include( locate_template('head.php') ); ?>
 
-<header class="Header" data-module="header">
+<header class="Header" data-module="header" data-module="menu">
    <div class="headerBanner">
         <div class="headerBanner__inner">
         
@@ -16,7 +16,7 @@ Use this to create your global site header, also including a 'main' wrapper whic
                 <img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt="">
             </div>
             <div class="headerBanner__menu">
-            <div class="headerBanner__menu--item">
+            <div class="headerBanner__menu--item" >
             <div class="box"></div>
                     <div class="box"></div>
                     <div class="box"></div>
@@ -33,4 +33,5 @@ Use this to create your global site header, also including a 'main' wrapper whic
    </div>
 </header>
 
+<?php include( locate_template('snippets/menu.php') ); ?>
 <main role="main">
