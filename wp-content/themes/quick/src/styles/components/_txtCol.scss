@@ -2,13 +2,13 @@
   background-color: $color-secondary-dark;
   color: $color-white;
   padding-top: 3em;
-  padding-bottom: 15em;
+  padding-bottom: 12em;
   @include bp(sm){
     padding-top: 4em;
     padding-bottom: 14em;
   }
   @include bp(lg){
-    padding-top: 7em;
+    padding-top: 5em;
   }
   .txtColumn__primary{
 
@@ -99,4 +99,51 @@
   position: absolute;
   left: 0px;
   top: 40%;
+}
+
+.carousel__toggler{
+  display: flex;
+  gap: 1em;
+  grid-column: 1/5;
+  padding-left: 10%;
+  padding-bottom: 1em;
+  @include bp(sm){
+    padding-left: unset;
+    grid-column: 2/span 4;
+    padding-bottom: 1em;
+  }
+
+  .toggler{
+    border-bottom: 3px solid #494949;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: border-color 0.2s;
+    width: 80px;
+    &:hover, &.clicked{
+      border-color: $color-primary;
+    }
+    @include bp(sm){
+      width: 80px;
+    }
+  }
+}
+
+.txt__order{
+  display: flex;
+  flex-direction: column;
+  .order__one{
+    order:2;
+    margin: 2em 0 0;
+  }
+  .order__two{
+    order: 1;
+  }
+  @include bp(sm){
+    .order__one{
+      margin:unset;
+    }
+    .order__one,.order__two{
+      order: unset;
+    }
+  }
 }

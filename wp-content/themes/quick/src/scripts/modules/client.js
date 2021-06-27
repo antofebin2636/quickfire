@@ -16,7 +16,7 @@ export default function init({ el }) {
         perView: 2,
         swipe: true,
         gap:40,
-        peek: {before:70,after:70},
+        peek: {before:100,after:100},
         // autoPlay:true,
 
 

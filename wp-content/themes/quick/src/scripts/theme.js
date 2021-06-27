@@ -3,7 +3,9 @@ import "../styles/theme.scss";
 
 const appearTitles = require('./modules/appear-title').default;
 
+
 appearTitles();
+
 
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("[data-module]").forEach((el) => {

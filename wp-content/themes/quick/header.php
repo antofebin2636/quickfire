@@ -34,4 +34,4 @@ Use this to create your global site header, also including a 'main' wrapper whic
 </header>
 
 <?php include( locate_template('snippets/menu.php') ); ?>
-<main role="main">
+<main role="main" data-module="pro-carousel">

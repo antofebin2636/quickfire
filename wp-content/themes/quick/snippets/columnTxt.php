@@ -1,6 +1,14 @@
 <section class="txtColumn"><span class="vr__title txt--vrTitle">our products</span>
-    <div class="PageContainers">
-        <div class="section__header"  data-up>
+    <div class="PageContainers txt__order" >
+        <div class="Section__columns order__one">
+            <div class="carousel__toggler" data-up>
+                <?php for($t=0;$t<3;$t++) {?>
+                    <span class="toggler" data-indexer="<?php  echo $t; ?>" ></span>
+                <?php } ?>
+            </div>
+        </div>
+
+        <div class="section__header order__two"  data-up>
                 <div class="Section__columns">
 
                     <div class="txtColumn__primary">

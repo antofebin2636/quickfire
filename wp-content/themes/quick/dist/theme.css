@@ -6752,7 +6752,7 @@ main {
   background-color: #1D1D1D;
   color: #ffffff;
   padding-top: 3em;
-  padding-bottom: 15em;
+  padding-bottom: 12em;
 }
 @media (min-width: 768px) {
   .txtColumn {
@@ -6762,7 +6762,7 @@ main {
 }
 @media (min-width: 1200px) {
   .txtColumn {
-    padding-top: 7em;
+    padding-top: 5em;
   }
 }
 .txtColumn .txtColumn__primary {
@@ -6863,6 +6863,56 @@ main {
   top: 40%;
 }
 
+.carousel__toggler {
+  display: flex;
+  gap: 1em;
+  grid-column: 1/5;
+  padding-left: 10%;
+  padding-bottom: 1em;
+}
+@media (min-width: 768px) {
+  .carousel__toggler {
+    padding-left: unset;
+    grid-column: 2/span 4;
+    padding-bottom: 1em;
+  }
+}
+.carousel__toggler .toggler {
+  border-bottom: 3px solid #494949;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  width: 80px;
+}
+.carousel__toggler .toggler:hover, .carousel__toggler .toggler.clicked {
+  border-color: #4DBFB2;
+}
+@media (min-width: 768px) {
+  .carousel__toggler .toggler {
+    width: 80px;
+  }
+}
+
+.txt__order {
+  display: flex;
+  flex-direction: column;
+}
+.txt__order .order__one {
+  order: 2;
+  margin: 2em 0 0;
+}
+.txt__order .order__two {
+  order: 1;
+}
+@media (min-width: 768px) {
+  .txt__order .order__one {
+    margin: unset;
+  }
+  .txt__order .order__one, .txt__order .order__two {
+    order: unset;
+  }
+}
+
 .proCarousel {
   position: relative;
   margin-bottom: 6em;
@@ -6913,7 +6963,12 @@ main {
 }
 @media (min-width: 1200px) {
   .carouselContent .carouselContent__img {
-    padding-bottom: 60%;
+    padding-bottom: 350px;
+  }
+}
+@media (min-width: 1440px) {
+  .carouselContent .carouselContent__img {
+    padding-bottom: 500px;
   }
 }
 .carouselContent .carouselContent__img img {

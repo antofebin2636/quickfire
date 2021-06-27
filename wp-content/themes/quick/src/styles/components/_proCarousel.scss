@@ -45,7 +45,10 @@
       padding-bottom: 60%;
     }
     @include bp(lg){
-      padding-bottom: 60%;
+      padding-bottom: 350px;
+    }
+    @include bp(xlg){
+      padding-bottom: 500px;
     }
     img{
       position: absolute;
