@@ -1,4 +1,5 @@
 <section class="imageGrid">
+    <span class="vr__title grid--vrTitle">case studies</span>
     <div class="PageContainer">
         <div class="imageGrid__header">
             <div class="Section__columns">
@@ -23,7 +24,11 @@
             <div class="imageGrid__column " data-up>
                 <?php for($r=0;$r<5;$r++) {?>
                 <div class="imageGrid__box" >
-                    <img src="<?php echo get_template_directory_uri() ?>/images/grid.png" alt="">
+                    <div class="imageGrid__boxWrapper">
+                        <a href="" class="imageGrid__boxPop">NORTHACRE<span>London</span></a>
+                        <img src="<?php echo get_template_directory_uri() ?>/images/grid.png" alt="">
+                    </div>
+
                 </div>
                 <?php } ?>
             </div>

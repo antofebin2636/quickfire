@@ -13,7 +13,7 @@
   clip-path: circle(25px at calc(100% - 45px) 45px);
   transition: all 0.3s ease-in-out;
   z-index: -1;
-
+  opacity: 0;
   @include bp(sm){
     align-items: center;
   }
@@ -33,6 +33,7 @@
   clip-path: circle(75%);
   z-index: 4;
   overflow: scroll;
+  opacity: 1;
 }
 
 .menuItems{

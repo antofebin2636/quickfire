@@ -1,0 +1,92 @@
+.Popup__wrapper {
+  position : fixed;
+  top : 0;
+  left : 0;
+  z-index : 99999;
+  display : none;
+  box-sizing : border-box;
+  width : 100%;
+  height : 100vh;
+  overflow : auto;
+
+  .Popup__flex {
+    display : flex;
+    align-items : center;
+    height : 100%;
+    padding : 5rem 0;
+  }
+
+  .Popup__offset {
+    position : relative;
+    z-index : 99;
+    box-sizing : border-box;
+    width : 94%;
+    max-width : 90vw;
+    margin : 0 auto;
+    text-align : center;
+    animation : slide_in_popup 0.3s cubic-bezier(0, 0.8, 0.95, 1);
+    @include bp(lg) {
+      max-width : 65em;
+    }
+  }
+
+  .Popup__content {
+    position : relative;
+    width : 100%;
+    overflow : hidden;
+    padding-top: 56.25%;
+    iframe{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .Popup--txt {
+    display : block;
+    padding-bottom : 1.5rem;
+    color : $color-p;
+    font-weight : $font-light;
+    font-size : 14px;
+    line-height : 24px;
+    text-align : left;
+  }
+
+  .Popup__rear {
+    position : fixed;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    background : #333;
+    background : rgba(0, 0, 0, 0.8);
+    cursor : pointer;
+  }
+
+  .Popup__cross {
+    position : absolute;
+    top: -45px;
+    right: 3px;
+    color : $color-primary;
+    font-weight : 400;
+    font-size : 40px;
+    cursor : pointer;
+  }
+
+}
+
+
+@keyframes slide_in_popup {
+
+  0% {
+    transform : translate(0, 5em);
+  }
+
+  100% {
+    transform : none;
+  }
+}

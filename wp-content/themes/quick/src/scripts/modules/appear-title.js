@@ -8,7 +8,7 @@ export default function init() {
     const line = document.querySelectorAll('[data-line]');
     const show =        document.querySelectorAll('[data-show]');
     var wrapper = gsap.utils.toArray(".homeBanner__linkWrapper");
-
+    var wrapBox = gsap.utils.toArray(".wrap--box");
     var upTxt = document.querySelectorAll('[data-up]');
 
     if (title) {
@@ -50,6 +50,27 @@ export default function init() {
     }
 
     wrapper.forEach(wrap => {
+
+        const boxes = wrap.querySelectorAll('[data-show]');
+        ElementObserver(wrap, {
+            onEnter:() =>{
+
+                gsap.from(boxes, {
+                    opacity:0,
+                    y:100,
+                    ease: "expo.out",
+                    duration:2,
+                    stagger: 0.2,
+                });
+            }
+            ,
+            offset: 0,
+            once: true,
+        });
+
+    });
+
+    wrapBox.forEach(wrap => {
 
         const boxes = wrap.querySelectorAll('[data-show]');
         ElementObserver(wrap, {

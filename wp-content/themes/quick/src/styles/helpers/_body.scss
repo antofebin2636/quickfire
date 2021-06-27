@@ -2,6 +2,9 @@
     @include Font__15-24;
     overflow-x: hidden;
     background-color: $color-white;
+    &.disable{
+        overflow: hidden;
+    }
 }
 
 main {
@@ -44,7 +47,7 @@ main {
     text-transform: capitalize;
     opacity: 0.7;
     display: none;
-    width: 81px;
+    //width: 81px;
     grid-column: 1;
     position: absolute;
     @include bp(lg){
