@@ -19,8 +19,8 @@ main {
     margin-right: auto;
      margin-left: auto;
     max-width: 100rem;
-    padding-right: 1em;
-    padding-left: 1em;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
     @include bp(sm){
         padding-left:2em ;
         padding-right: 2em;

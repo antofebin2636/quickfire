@@ -7,10 +7,15 @@
   //}
 }
 
+.proCarousel__columns{
+  padding-left: 8%;
+
+}
+
 .proCarousel__wrapper{
   color: $color-white;
   grid-column: 1/5;
-  padding: 0 0 0 2em;
+  //padding: 0 0 0 2em;
 
   @include bp(sm){
     grid-column: 2/13;

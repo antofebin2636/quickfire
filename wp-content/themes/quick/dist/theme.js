@@ -108,6 +108,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/scripts/modules/banner.js":
+/*!***************************************!*\
+  !*** ./src/scripts/modules/banner.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ init)\n/* harmony export */ });\n/* harmony import */ var _glidejs_glide_dist_glide_modular_esm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @glidejs/glide/dist/glide.modular.esm */ \"./node_modules/@glidejs/glide/dist/glide.modular.esm.js\");\n\n\nfunction init({ el }) {\n    /* The original element that requested the module */\n    const context = el;\n    // eslint-disable-next-line no-new\n\n    const elements = {\n        carousel : context.querySelector('[data-carousel]'),\n    }\n\n    new _glidejs_glide_dist_glide_modular_esm__WEBPACK_IMPORTED_MODULE_0__.default(elements.carousel, {\n        type: 'gallery',\n        perView: 1,\n        autoplay: 6000,\n        swipe: true,\n        gap:10,\n        peek: {before:0,after:150},\n    }).mount({ Swipe: _glidejs_glide_dist_glide_modular_esm__WEBPACK_IMPORTED_MODULE_0__.Swipe, Controls: _glidejs_glide_dist_glide_modular_esm__WEBPACK_IMPORTED_MODULE_0__.Controls});\n\n}\n\n//# sourceURL=webpack://wordpress-starter/./src/scripts/modules/banner.js?");
+
+/***/ }),
+
 /***/ "./src/scripts/modules/carousel.js":
 /*!*****************************************!*\
   !*** ./src/scripts/modules/carousel.js ***!
@@ -180,7 +191,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("var map = {\n\t\"./appear-title\": \"./src/scripts/modules/appear-title.js\",\n\t\"./appear-title.js\": \"./src/scripts/modules/appear-title.js\",\n\t\"./carousel\": \"./src/scripts/modules/carousel.js\",\n\t\"./carousel.js\": \"./src/scripts/modules/carousel.js\",\n\t\"./client\": \"./src/scripts/modules/client.js\",\n\t\"./client.js\": \"./src/scripts/modules/client.js\",\n\t\"./header\": \"./src/scripts/modules/header.js\",\n\t\"./header.js\": \"./src/scripts/modules/header.js\",\n\t\"./menu\": \"./src/scripts/modules/menu.js\",\n\t\"./menu.js\": \"./src/scripts/modules/menu.js\",\n\t\"./pro-carousel\": \"./src/scripts/modules/pro-carousel.js\",\n\t\"./pro-carousel.js\": \"./src/scripts/modules/pro-carousel.js\",\n\t\"./video\": \"./src/scripts/modules/video.js\",\n\t\"./video.js\": \"./src/scripts/modules/video.js\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/scripts/modules sync recursive ^\\\\.\\\\/.*$\";\n\n//# sourceURL=webpack://wordpress-starter/./src/scripts/modules/_sync_^\\.\\/.*$?");
+eval("var map = {\n\t\"./appear-title\": \"./src/scripts/modules/appear-title.js\",\n\t\"./appear-title.js\": \"./src/scripts/modules/appear-title.js\",\n\t\"./banner\": \"./src/scripts/modules/banner.js\",\n\t\"./banner.js\": \"./src/scripts/modules/banner.js\",\n\t\"./carousel\": \"./src/scripts/modules/carousel.js\",\n\t\"./carousel.js\": \"./src/scripts/modules/carousel.js\",\n\t\"./client\": \"./src/scripts/modules/client.js\",\n\t\"./client.js\": \"./src/scripts/modules/client.js\",\n\t\"./header\": \"./src/scripts/modules/header.js\",\n\t\"./header.js\": \"./src/scripts/modules/header.js\",\n\t\"./menu\": \"./src/scripts/modules/menu.js\",\n\t\"./menu.js\": \"./src/scripts/modules/menu.js\",\n\t\"./pro-carousel\": \"./src/scripts/modules/pro-carousel.js\",\n\t\"./pro-carousel.js\": \"./src/scripts/modules/pro-carousel.js\",\n\t\"./video\": \"./src/scripts/modules/video.js\",\n\t\"./video.js\": \"./src/scripts/modules/video.js\"\n};\n\n\nfunction webpackContext(req) {\n\tvar id = webpackContextResolve(req);\n\treturn __webpack_require__(id);\n}\nfunction webpackContextResolve(req) {\n\tif(!__webpack_require__.o(map, req)) {\n\t\tvar e = new Error(\"Cannot find module '\" + req + \"'\");\n\t\te.code = 'MODULE_NOT_FOUND';\n\t\tthrow e;\n\t}\n\treturn map[req];\n}\nwebpackContext.keys = function webpackContextKeys() {\n\treturn Object.keys(map);\n};\nwebpackContext.resolve = webpackContextResolve;\nmodule.exports = webpackContext;\nwebpackContext.id = \"./src/scripts/modules sync recursive ^\\\\.\\\\/.*$\";\n\n//# sourceURL=webpack://wordpress-starter/./src/scripts/modules/_sync_^\\.\\/.*$?");
 
 /***/ }),
 

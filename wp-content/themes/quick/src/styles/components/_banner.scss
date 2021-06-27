@@ -93,7 +93,7 @@
     bottom: 0px;
     width: 100%;
 
-    @include bp(lg){
+    @include bp(sm){
         padding-left: 8%;
     }
     .homeBanner__linkWrapper{
@@ -166,5 +166,65 @@
     height: 100%;
     :is(.glide, .glide__track, .glide__slides){
         height: 100%;
+    }
+}
+
+.show__mob{
+
+
+}
+
+.bannerLink__carousel{
+    color: $color-white;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+    left: 10%;
+    z-index: 2;
+    position: relative;
+    padding-bottom: 2em;
+    @include bp(sm){
+        display: none;
+    }
+
+    .bannerLink__box{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-left: 2em;
+        .title{
+            display: block;
+            padding-bottom: 0.5em;
+            @include Font__14-24;
+        }
+        .main__title{
+            display: block;
+            transition: all 0.2s;
+            @include Font__18-18;
+
+            &:after{
+                content:'';
+                border-bottom: 1px solid;
+                width: 100%;
+                display: block;
+                transform: scaleX(0);
+                transition: all 0.5s;
+                transform-origin: left;
+            }
+            &:hover{
+                &:after{
+                    transform: scale(1);
+                }
+            }
+        }
+        &::before{
+            content: attr(data-title);
+            position: absolute;
+            display: block;
+            left: 0px;
+            color:$color-primary;
+            opacity: 0.8;
+            font-weight: $font-semi-bold;
+        }
     }
 }

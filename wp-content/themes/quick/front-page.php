@@ -6,4 +6,5 @@
 <?php get_template_part('snippets/grid') ?>
 <?php get_template_part('snippets/video') ?>
 <?php get_template_part('snippets/testimonials') ?>
+<?php get_template_part('snippets/contact') ?>
 <?php include (locate_template ('footer.php') ); ?>

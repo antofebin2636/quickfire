@@ -1,0 +1,148 @@
+.footer {
+  background-color: $color-black;
+  padding: 4em 0px;
+  .footer__grid {
+      display: flex;
+    flex-wrap: wrap;
+
+
+    //grid-template-columns: ;
+    @include bp(sm) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2em;
+    }
+  }
+
+  .grid__box{
+    color: $color-white;
+    &:nth-child(1){
+      width: 100%;
+    }
+    &:not(:first-child){
+      padding-top: 1.5em;
+      flex: 1;
+    }
+    @include bp(sm){
+      &:nth-child(1){
+        width: unset;
+      }
+      &:not(:first-child){
+        padding-top: unset;
+        flex: unset;
+      }
+    }
+    .footer__address{
+      @include Font__12-20;
+      padding: 1em 0px;
+      display: block;
+      .footer__addr{
+        padding-bottom: 1em;
+      }
+      .footer__con{
+        display: block;
+        span{
+          color: $color-primary;
+          padding-left: 1em;
+          display: inline-block;
+        }
+        &:not(:first-child){
+          padding-top: 1em;
+        }
+        span{
+          &:after{
+          content: "";
+            border-bottom: 1px solid;
+            width: 100%;
+            display: block;
+            transform: scaleX(0);
+            transition: all 0.5s;
+            transform-origin: left;
+          }
+        }
+        &:hover{
+          span{
+            &:after{
+              transform: scaleX(1);
+            }
+          }
+        }
+      }
+    }
+
+    .title{
+      font-family: $font-secondary;
+      display: block;
+      padding: 0 0 1em;
+      color: $color-primary;
+      @include Font__20-32;
+    }
+
+  }
+}
+
+
+.footer__social{
+  padding-top: 1.5em;
+  display: flex;
+  justify-content: flex-start;
+  color:$color-primary;
+  font-size: 18px;
+  >*+*{
+    padding-left: 2em;
+  }
+  a{
+    transition: color 0.2s;
+
+    &:hover{
+      color: $color-white;
+    }
+  }
+}
+
+.footer__logo{
+  img{
+    width: 65%;
+  }
+}
+
+
+.footer__menu{
+  display: flex;
+  flex-direction: column;
+  li{
+    @include Font__12-20;
+    display: inline-block;
+    a{
+      transition: color 0.2s;
+      &:after{
+        content: "";
+        border-bottom: 1px solid;
+        width: 100%;
+        display: block;
+        transform: scaleX(0);
+        transition: all 0.5s;
+        transform-origin: left;
+      }
+      &:hover{
+        color: $color-primary;
+        &:after{
+          transform: scaleX(1);
+        }
+
+    }
+    }
+  }
+  > * + *{
+        padding-top: 0.8em;
+      }
+
+}
+
+.FooterContainer{
+  display: block;
+  width: 94%;
+  max-width: 75em;
+  margin: 0 auto;
+  padding: 0 1em;
+}

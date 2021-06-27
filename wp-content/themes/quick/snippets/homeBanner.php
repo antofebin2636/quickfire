@@ -1,6 +1,6 @@
 
     <section>
-        <div class="homeBanner">
+        <div class="homeBanner" data-module="banner">
             <div class="homeBanner__container">
                 <div class="homeBanner__row"><span class="scroller__txt">Scroll For more</span></div>
                 <div class="homeBanner__content">
@@ -18,6 +18,21 @@
                             <?php } ?>
                         </div>
                     </div>
+
+                        <div class="bannerLink__carousel" data-module="banner" data-up>
+                            <div class="glide" data-carousel>
+                                <div class="glide__track" data-glide-el="track">
+                                    <div class="glide__slides">
+                                        <?php for($c=1;$c<4;$c++){ ?>
+                                            <div class="bannerLink__box" data-show data-title="0<?php  echo $c;?>">
+                                                <span class="title">Belgrade</span>
+                                                <a href=""  class="main__title">The WaterFront</a>
+                                            </div>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>

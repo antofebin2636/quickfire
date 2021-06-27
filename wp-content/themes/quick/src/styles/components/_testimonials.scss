@@ -28,9 +28,9 @@
     position: relative;
     text-align: center;
     font-family: $font-secondary;
-    max-width: 90vw;
-    font-size: 18px;
-    line-height: 26px;
+    max-width: 88vw;
+    font-size: 20px;
+    line-height: 24px;
     padding-bottom: 0.7em;
     @include bp(sm){
       max-width: 75vw;
@@ -38,7 +38,9 @@
     }
     @include bp(lg){
       max-width: 60vw;
-
+    }
+    @include bp(xlg){
+      max-width: 40vw;
     }
   }
 
