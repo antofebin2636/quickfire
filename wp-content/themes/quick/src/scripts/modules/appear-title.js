@@ -14,6 +14,7 @@ export default function init() {
     if (title) {
         title.forEach((element) => {
             gsap.set(element, { autoAlpha: 0 });
+            gsap.set(line, { autoAlpha: 0 });
 
             ElementObserver(element, {
 
@@ -28,6 +29,7 @@ export default function init() {
                         type: 'words',
                     })
                     gsap.set(element, { autoAlpha: 1 });
+                    gsap.set(line, { autoAlpha: 1 });
                     timeline.fromTo(split.words, {
                             x: -15,
                             opacity: 0,
@@ -40,7 +42,7 @@ export default function init() {
                             opacity: 1,
                             stagger: 0.1
                         }
-                    ).from(line,{x:-20,autoAlpha:0,duration:0.5},'-=1')
+                    ).from(line,{x:-10,autoAlpha:1,duration:0.5},'-=1')
 
                 },
                 offset: 0,

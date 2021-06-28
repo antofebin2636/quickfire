@@ -6565,6 +6565,7 @@ main {
   display: inline-block;
   position: relative;
   top: -10px;
+  left: 10px;
 }
 
 .homeBanner__row {
